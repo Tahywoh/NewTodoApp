@@ -1,0 +1,121 @@
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+}
+
+ul>li {
+    list-style-type: disc;
+}
+
+
+/*responsiveness*/
+
+@media only screen and (max-width: 992px) {
+    #toggleAllTodoBtn,
+    #displayTodoBtn {
+        font-size: 0.6rem;
+        padding: 0 0.5rem;
+    }
+}
+
+
+/* body>div.row {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-size: 100% 100%;
+    z-index: 1000;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+} */
+
+div.col.m8.offset-m2.s6.offset-s3 {
+    border-radius: 14px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 0.8rem 0.8rem;
+}
+
+button.btn {
+    margin-bottom: 1.3rem !important;
+}
+
+x3 {
+    font-size: 3rem;
+}
+
+i.ion-ios-plus {
+    font-size: 3rem;
+}
+
+button.btn-floating.btn-large.waves-effect.waves-light.grey {
+    top: -0.8rem;
+}
+
+@media only screen and (min-width: 601px) {
+    .row .col.offset-m3 {
+        margin-left: 2%;
+    }
+}
+
+div#id01 {
+    display: none;
+}
+
+button {
+    margin: 0 1rem;
+}
+
+div#id01 {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 4rem;
+}
+
+.input-field.col.s6 {
+    width: 70%;
+}
+
+ul li {
+    list-style-type: none;
+    background-color: darkorange;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+#edit-item span.w3-closebtn,
+#delete-item span.w3-closebtn,
+#toggle-item span.w3-closebtn {
+    float: right;
+}
+
+.contents.left.col.s5.grey.darken-3.white-text {
+    text-align: left;
+}
+
+div.col.s5 {
+    background-color: #5a5a5a !important;
+    color: black !important;
+    border-radius: 14px;
+    padding: 1.2rem;
+}
+
+div>button {
+    margin: 0.8rem
+}

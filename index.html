@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to TODO</title>
+    <link rel="icon" type="image/png" href="./public/images/ToDo-List-icon.png">
+    <link rel="stylesheet" href="./public/css/materialize.min.css">
+    <link rel="stylesheet" href="./public/css/w3.css">
+    <link rel="stylesheet" href="./public/css/ionicons.min.css">
+    <link rel="stylesheet" href="./public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/css/todostyle.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col m8 offset-m2 s6 offset-s3 red darken-2 white-text center-align">
+            <div>
+                <h1 class="appName center-align center">
+                    Todo List
+                </h1>
+            </div>
+            <div class="contents left col s5  grey darken-3 white-text ">
+                <button class="waves-effect waves-light btn" id="displayTodoBtn" onclick="handlers.displayTodo();">
+                    Display Todo
+                </button>
+                <button class="waves-effect waves-light btn" id="toggleAllTodoBtn" onclick="handlers.toggleAll();">
+                    Toggle All
+                </button>
+                <button class="btn-floating btn-large waves-effect waves-light grey" onclick="document.getElementById('id01').style.display='block'">
+                    <i class="ion-ios-plus" ></i>
+                    
+                </button>
+
+                <div id="id01" class="center-align" style="display:none;">
+                    <div>
+                        <div>
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn" style="cursor:pointer;">X</span>
+
+                            <div class="input-field col s6">
+                                <input type="text" class="validate" placeholder="Enter text" id="addTodoText" autofocus>
+
+                            </div><br/>
+                            <button class="waves-effect waves-light btn" onclick="handlers.addTodo();" style="font-size: 0.8rem; padding: 0 0.5rem;">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn-floating btn-large waves-effect waves-light grey waves-light" onclick="document.getElementById('edit-item').style.display='block'">
+                    <i class="ion-ios-compose x3" ></i>
+                </button>
+                <div id="edit-item" class="center-align" style="display:none;">
+                    <div>
+                        <span onclick="document.getElementById('edit-item').style.display='none'" class="w3-closebtn" style="cursor:pointer;">X</span>
+                        <input type="number" class="validate" placeholder="Enter position" id="newTodoPosition" min="1" autofocus>
+                        <input type="text" class="validate" placeholder="Enter new Value" id="newTodoValue" autofocus>
+
+                        <button class="waves-effect waves-light btn" id="changeTodoBtn" onclick="handlers.changeTodo();" autofocus style="font-size: 0.8rem; padding: 0 0.5rem;">
+                            Edit Todo
+                        </button>
+                    </div>
+                </div>
+
+
+                <button class="btn-floating btn-large waves-effect waves-light grey waves-light" onclick="document.getElementById('delete-item').style.display='block'">
+                    <i class="icon ion-backspace x3" ></i>
+                </button>
+                <div id="delete-item" class="center-align" style="display:none;">
+                    <div>
+                        <span onclick="document.getElementById('delete-item').style.display='none'" class="w3-closebtn" style="cursor:pointer;">X</span>
+
+                        <input type="number" class="validate" placeholder="Enter position" id="toDeletePosition" min="1" autofocus>
+
+                        <button class="waves-effect waves-light btn" onclick="handlers.deleteTodo();" style="font-size: 0.8rem; padding: 0 0.5rem;">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <button class="btn-floating btn-large waves-effect waves-light grey waves-light" onclick="document.getElementById('toggle-item').style.display='block'">
+                    <i class="icon ion-toggle-filled x3" ></i>
+                </button>
+                <div id="toggle-item" class="center-align" style="display:none;">
+                    <div>
+                        <span onclick="document.getElementById('toggle-item').style.display='none'" class="w3-closebtn" style="cursor:pointer;">X</span>
+
+                        <input type="number" class="validate" placeholder="Enter position" id="toggleCompletedPosition" min="1" autofocus>
+
+                        <button class="waves-effect waves-light btn" onclick="handlers.toggleCompleted();" style="font-size: 0.8rem; padding: 0 0.5rem;">
+                            Toggle Completed
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="todoContents col s5 right class=" grey darken-3 white-text "">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="public/js/jquerynew.min.js"></script>
+    <script src="public/js/todoObject.js"></script>
+</body>
+
+</html>

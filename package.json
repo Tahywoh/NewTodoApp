@@ -1,0 +1,16 @@
+{
+    "name": "todoapp",
+    "version": "1.0.0",
+    "description": "An app for storing list of todos. Not saved in database though",
+    "main": "watcher.js",
+    "dependencies": {
+        "express": "^4.16.2",
+        "passport": "^0.4.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node watcher.js"
+    },
+    "author": "TAIWO ADESHINA",
+    "license": "ISC"
+}

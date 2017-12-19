@@ -1,0 +1,8 @@
+,
+    createDeleteButton: function() {
+        var deleteButton = document.createElement(`button`);
+        deleteButton.textContent = `delete`;
+        deleteButton.className = `deleteButton`;
+        //var element = document.getElementById("div1"; element.classList.add("otherclass");
+
+        return deleteButton;
